@@ -1,1 +1,3 @@
-sim1_rep.m is used to generate FIgures 1-2 for the paper "ϕ-PCA: An Efficiency-Preserving Framework for Ordering-Robust Principal Component Analysis"
+For the paper "ϕ-PCA: An Efficiency-Preserving Framework for Ordering-Robust Principal Component Analysis":
+[sim1_rep.m] is used to generate Figures 1-2
+[mnist_eg.m] is used to generate Figures 3-4 based on mnist.mat 
