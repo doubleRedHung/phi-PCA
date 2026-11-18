@@ -1,7 +1,7 @@
 close all
 clear variables
 
-irep = 50;
+irep = 200;
 n = 400;   % 1000
 p = 1000;  % 200
 r = 10;   % true rank
