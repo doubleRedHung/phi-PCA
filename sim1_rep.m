@@ -2,8 +2,8 @@ close all
 clear variables
 
 irep = 50;
-n = 400;   % 1000
-p = 1000;  % 200
+n = 400;   
+p = 1000;  % 200 or 1000
 r = 10;   % true rank
 ru = 50;  %  upper bound of r
 
