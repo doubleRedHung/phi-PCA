@@ -1,9 +1,9 @@
 close all
 clear variables
 
-irep = 10;
+irep = 50;
 n = 400;   % 1000
-p = 1000;  % 300
+p = 1000;  % 200
 r = 10;   % true rank
 ru = 50;  %  upper bound of r
 
@@ -32,8 +32,7 @@ o_e = p;  % no. eigenvectors for outlier (critical!) -> space for outliers
 
 %%
 Lambda_signal = 1 + (p/n)^0.5 + p.^(1./[2:(3/(r-1)):5])';
-% Lambda_signal = ((1 + (p/n)^0.5) .* [2:(3/(r-1)):5])';
-
+% Lambda_signal = 1 + (p/n)^0.5 + p.^(1./[2:r+1])';
 
 
 Lambda = [Lambda_signal; unifrnd(theta, 2-theta, p-length(Lambda_signal),1)];
@@ -61,7 +60,7 @@ o_std = o_std_seq(i_o)
 %     % x = trnd(dof, n,p)*Sigma_half./(dof/(dof-2))^0.5; 
 %    x = mvnrnd(zeros(p,1), Sigma, n); 
 % end
-x = mvnrnd(normrnd(0,10,p,1), Sigma, n);
+x = mvnrnd(normrnd(0,0,p,1), Sigma, n);
 [vv_pca0, ss_pca0] = svds(cov(x), p);  %%% optimal PCA
 
 %%% outliers %%%
